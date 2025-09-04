@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DrawToChat (WIP)</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="header-content">
+			<h1>ChatRoom (WIP)</h1>
+			<nav class="main-nav">
+				<ul>
+					<li><a href="#" class="nav-link">Home</a></li>
+					<li><a href="#" class="nav-link">About</a></li>
+					<li><a href="#" class="nav-link">Contact</a></li>
+				</ul>
+			</nav>
+			<button class="login-btn">Login</button>
+		</div>
+	</header>
+	<div class="container">
+		<aside>
+			<h2>Contacts</h2>
+			<ul class="contacts-list">
+				<li>Alice</li>
+				<li>Bob</li>
+				<li>Charlie</li>
+			</ul>
+		</aside>
+		<main>
+			<div class="chat-area">
+				<div class="messages">
+					<div class="message-block">
+						<p class="message-author"><strong>Alice:</strong></p>
+						<img src="zirgs.png" alt="User Drawing" class="chat-image" />
+					</div>
+				</div>
+				   <form class="chat-input" id="draw-form">
+					   <canvas id="draw-canvas"></canvas>
+					   <button type="submit">Send Drawing</button>
+				   </form>
+				   <script src="function.js"></script>
+			</div>
+		</main>
+	</div>
+	<footer>
+		<p>&copy; 2025 ChatRoom (WIP). All rights reserved.</p>
+	</footer>
+</body>
+</html>
