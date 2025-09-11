@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DrawToChat (WIP)</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="draw.css">
 </head>
 <body>
 	<header>
@@ -35,15 +36,34 @@
 				<div class="messages">
 					<div class="message-block">
 						<p class="message-author"><strong>Alice:</strong></p>
-						<img src="zirgs.png" alt="User Drawing" class="chat-image" />
+						<div class="image-container">
+							<img src="zirgs.png" alt="User Drawing" class="chat-image"/>
+							<div class="info">
+								<p>Posted on 09/09/2025 on 09:04am</p>
+							</div>
+						</div>
 					</div>
 				</div>
-				   <form class="chat-input" id="draw-form">
-					   <canvas id="draw-canvas"></canvas>
-					   <button type="submit">Send Drawing</button>
-				   </form>
-				   <script src="function.js"></script>
 			</div>
+				<form class="chat-input" id="draw-form">
+					<div class="draw-controls">
+						<label for="color-picker">Color:</label>
+						<input type="color" id="color-picker" value="#ffffff" aria-label="Pick drawing color"/>
+						<div class="preset-swatches" aria-label="Color presets">
+							<button type="button" class="color-swatch" data-color="#000000" title="Black" aria-label="Black"></button>
+							<button type="button" class="color-swatch" data-color="#ffffff" title="White" aria-label="White"></button>
+							<button type="button" class="color-swatch" data-color="#ff4d4d" title="Red" aria-label="Red"></button>
+							<button type="button" class="color-swatch" data-color="#4dff4d" title="Green" aria-label="Green"></button>
+							<button type="button" class="color-swatch" data-color="#4d8fff" title="Blue" aria-label="Blue"></button>
+							<button type="button" class="color-swatch" data-color="#ffd93b" title="Yellow" aria-label="Yellow"></button>
+							<button type="button" class="color-swatch" data-color="#b366ff" title="Purple" aria-label="Purple"></button>
+						</div>
+						<button type="button" id="eraser-btn" class="tool-btn" aria-pressed="false" title="Eraser">Eraser</button>
+					</div>
+				<canvas id="draw-canvas"></canvas>
+				<button type="submit">Send Drawing</button>
+			</form>
+			<script src="function.js"></script>
 		</main>
 	</div>
 	<footer>

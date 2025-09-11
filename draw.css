@@ -1,0 +1,91 @@
+.draw-section {
+	background: linear-gradient(135deg, #23272a 80%, #5865f2 100%);
+	border: 3px solid #5865f2;
+	border-radius: 18px;
+	box-shadow: 0 4px 24px 0 rgba(88,101,242,0.15), 0 2px 0 #5865f2;
+	padding: 19px 24px 24px 24px;
+	margin-bottom: 19px;
+	margin-top: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	transition: box-shadow 0.2s;
+}
+
+.draw-section:hover, .draw-section:focus-within {
+	box-shadow: 0 6px 32px 0 #5865f2, 0 2px 0 #5865f2;
+}
+
+.draw-label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 11px;
+	letter-spacing: 1px;
+}
+
+#draw-canvas {
+	background: #181a1b;
+	border: 2px dashed #5865f2;
+	border-radius: 12px;
+	box-shadow: 0 2px 12px 0 rgba(88,101,242,0.10);
+	margin-bottom: 13px;
+	transition: border-color 0.2s;
+}
+
+#draw-canvas:focus, #draw-canvas:hover {
+	border-color: #fff;
+}
+
+/* drawing UI controls */
+.draw-controls {
+	display:flex;
+	gap:8px;
+	align-items:center;
+	margin-bottom:8px;
+	flex-wrap: wrap;
+}
+
+.draw-controls label {
+	color: #e0e0e0;
+}
+
+.preset-swatches {
+	display:flex;
+	gap:6px;
+	align-items:center;
+}
+
+.color-swatch {
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	border: 2px solid #444;
+	padding: 0;
+	cursor: pointer;
+}
+
+.color-swatch:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px #5865f2;
+}
+
+/*match the data-color attributes*/
+.color-swatch[data-color="#000000"] { background: #000; }
+.color-swatch[data-color="#ffffff"] { background: #fff; border:1px solid #aaa; }
+.color-swatch[data-color="#ff4d4d"] { background: #ff4d4d; }
+.color-swatch[data-color="#4dff4d"] { background: #4dff4d; }
+.color-swatch[data-color="#4d8fff"] { background: #4d8fff; }
+.color-swatch[data-color="#ffd93b"] { background: #ffd93b; }
+.color-swatch[data-color="#b366ff"] { background: #b366ff; }
+
+.tool-btn[aria-pressed="true"] {
+	background: #36393f;
+	color: #ffd93b;
+	border: 2px solid #ffd93b;
+}
+

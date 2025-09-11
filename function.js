@@ -4,6 +4,41 @@ window.addEventListener('DOMContentLoaded', function() {
 	const ctx = canvas.getContext('2d');
 	let drawing = false;
 	let lastX = 0, lastY = 0;
+	let strokeColor = '#ffffff';
+	let strokeWidth = 3;
+	let eraserMode = false;
+
+	// wire up color picker if present
+	const colorPicker = document.getElementById('color-picker');
+	if (colorPicker) {
+		strokeColor = colorPicker.value || strokeColor;
+		colorPicker.addEventListener('input', () => {
+			eraserMode = false;
+			strokeColor = colorPicker.value;
+		});
+	}
+
+	// preset swatches
+	const swatches = document.querySelectorAll('.color-swatch');
+	swatches.forEach(btn => {
+		btn.addEventListener('click', () => {
+			eraserMode = false;
+			const color = btn.getAttribute('data-color');
+			if (color) {
+				strokeColor = color;
+				if (colorPicker) colorPicker.value = color;
+			}
+		});
+	});
+
+	// eraser
+	const eraserBtn = document.getElementById('eraser-btn');
+	if (eraserBtn) {
+		eraserBtn.addEventListener('click', () => {
+			eraserMode = !eraserMode;
+			eraserBtn.setAttribute('aria-pressed', String(eraserMode));
+		});
+	}
 
 	function getPos(e) {
 		if (e.touches) {
@@ -30,8 +65,9 @@ window.addEventListener('DOMContentLoaded', function() {
 		if (!drawing) return;
 		e.preventDefault();
 		const pos = getPos(e);
-		ctx.strokeStyle = '#fff';
-		ctx.lineWidth = 3;
+	// if erasing, draw with background color and a thicker line
+	ctx.strokeStyle = eraserMode ? '#181a1b' : strokeColor;
+	ctx.lineWidth = eraserMode ? 16 : strokeWidth;
 		ctx.lineCap = 'round';
 		ctx.beginPath();
 		ctx.moveTo(lastX, lastY);
