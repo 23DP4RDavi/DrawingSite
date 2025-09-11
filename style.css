@@ -266,6 +266,7 @@ footer {
 	margin-bottom: 16px;
 	display: flex;
 	flex-direction: column;
+}
 
 .login-btn:hover {
 	background: #4752c4;
