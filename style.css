@@ -1,4 +1,4 @@
-/* CSS Variables for theme support */
+/* TODO, make it cleaner */
 :root {
 	--bg-primary: #181a1b;
 	--bg-secondary: #23272a;
@@ -303,7 +303,6 @@ main {
 .card-text { margin: 0; color: var(--text-secondary); font-size: 14px; }
 .no-results { text-align:center; color: var(--text-secondary); }
 
-/* Contact form */
 .contact-section { margin: 16px 0; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; }
 .contact-section h2 { margin: 0 0 12px; }
 .form-row { display:flex; flex-direction:column; gap:6px; margin-bottom: 12px; }
