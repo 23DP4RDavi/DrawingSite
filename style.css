@@ -1,4 +1,3 @@
-/* TODO, make it cleaner */
 :root {
 	--bg-primary: #181a1b;
 	--bg-secondary: #23272a;
@@ -221,6 +220,23 @@ aside {
 	color: var(--text-secondary);
 }
 
+/* Contacts: avatar + name inline */
+.contacts-list li.contact-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.contacts-list .avatar {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid var(--border-color);
+	background: var(--bg-primary);
+	box-shadow: 0 1px 3px var(--shadow-color);
+}
+
 .contacts-list li:last-child {
 	border-bottom: none;
 }
@@ -378,6 +394,9 @@ main {
 	.chat-image {
 		max-width: 100%;
 	}
+
+	/* Slightly smaller avatars on mobile */
+	.contacts-list .avatar { width: 28px; height: 28px; }
 }
 
 @media (max-width: 480px) {
