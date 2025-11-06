@@ -54,19 +54,16 @@
 		</aside>
 		<main>
 
-			<div class="chat-area">
-				<div class="messages">
-					<div class="message-block">
-						<p class="message-author"><strong>Alice:</strong></p>
-						<div class="image-container">
-							<img src="zirgs.png" alt="User Drawing" class="chat-image"/>
-							<div class="info">
-								<p>Posted on 09/09/2025 on 09:04am</p>
-							</div>
-						</div>
-					</div>
+			<!-- Cards section: create, search, and list -->
+			<section class="cards-section">
+				<div class="content-search" style="gap:8px; align-items:center;">
+					<input id="card-search" class="search-input" type="search" placeholder="Meklēt kartiņas..." aria-label="Meklēt kartiņas" />
+					<button type="button" id="create-card-btn" class="send-under-size" aria-label="Izveidot jaunu kartiņu">Izveidot</button>
 				</div>
-			</div>
+				<div class="card-grid" id="card-list">
+					<div class="no-results" hidden>Nav rezultātu</div>
+				</div>
+			</section>
 				<form class="chat-input" id="draw-form">
 					<div class="draw-layout" role="group" aria-label="Drawing tools">
 						<div class="palette">
