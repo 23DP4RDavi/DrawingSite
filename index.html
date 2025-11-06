@@ -8,45 +8,49 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="draw.css">
 </head>
-<body>
+<body class="home">
 	<header>
 		<script defer src="header.js"></script>
 	</header>
 	
 	<div class="container">
 		<aside>
-			<h2>Groups</h2>
-			<ul class="group-list">
-				<li class="group-item">
-					<img class="group-pic" src="group.png" alt="sip dhit group" />
-					<span>sip dhit</span>
-				</li>
-				<li class="group-item">
-					<img class="group-pic" src="group.png" alt="Wall gremlins group" />
-					<span>Wall gremlins</span>
-				</li>
-				<li class="group-item">
-					<img class="group-pic" src="group.png" alt="Dwarf phone punchers group" />
-					<span>Dwarf phone punchers</span>
-				</li>
-			</ul>
+			<details class="sidebar-accordion">
+				<summary aria-controls="group-list" aria-expanded="true">Groups</summary>
+				<ul class="group-list" id="group-list">
+					<li class="group-item">
+						<img class="group-pic" src="group.png" alt="sip dhit group" />
+						<span>sip dhit</span>
+					</li>
+					<li class="group-item">
+						<img class="group-pic" src="group.png" alt="Wall gremlins group" />
+						<span>Wall gremlins</span>
+					</li>
+					<li class="group-item">
+						<img class="group-pic" src="group.png" alt="Dwarf phone punchers group" />
+						<span>Dwarf phone punchers</span>
+					</li>
+				</ul>
+			</details>
 		</aside>
 		<aside>
-			<h2>Contacts</h2>
-			<ul class="contacts-list">
-				<li class="contact-item">
-					<img class="avatar" src="profile.png" alt="Alice avatar" />
-					<span>Alice</span>
-				</li>
-				<li class="contact-item">
-					<img class="avatar" src="profile.png" alt="Bob avatar" />
-					<span>Bob</span>
-				</li>
-				<li class="contact-item">
-					<img class="avatar" src="profile.png" alt="Charlie avatar" />
-					<span>Charlie</span>
-				</li>
-			</ul>
+			<details class="sidebar-accordion">
+				<summary aria-controls="contacts-list" aria-expanded="true">Contacts</summary>
+				<ul class="contacts-list" id="contacts-list">
+					<li class="contact-item">
+						<img class="avatar" src="profile.png" alt="Alice avatar" />
+						<span>Alice</span>
+					</li>
+					<li class="contact-item">
+						<img class="avatar" src="profile.png" alt="Bob avatar" />
+						<span>Bob</span>
+					</li>
+					<li class="contact-item">
+						<img class="avatar" src="profile.png" alt="Charlie avatar" />
+						<span>Charlie</span>
+					</li>
+				</ul>
+			</details>
 		</aside>
 		<main>
 
@@ -63,29 +67,6 @@
 					</div>
 				</div>
 			</div>
-
-			<section class="contact-section" id="contact">
-				<h2>Contact us</h2>
-				<form id="contact-form" novalidate>
-					<div class="form-row">
-						<label for="name">Name</label>
-						<input id="name" name="name" type="text" required />
-						<small class="error-text" aria-live="polite"></small>
-					</div>
-					<div class="form-row">
-						<label for="email">Email</label>
-						<input id="email" name="email" type="email" required />
-						<small class="error-text" aria-live="polite"></small>
-					</div>
-					<div class="form-row">
-						<label for="message">Message</label>
-						<textarea id="message" name="message" rows="4" required></textarea>
-						<small class="error-text" aria-live="polite"></small>
-					</div>
-					<button type="submit" class="contact-submit">Send message</button>
-					<p class="form-message" aria-live="polite"></p>
-				</form>
-			</section>
 				<form class="chat-input" id="draw-form">
 					<div class="draw-layout" role="group" aria-label="Drawing tools">
 						<div class="palette">
