@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Contact & Search</title>
+	<link rel="stylesheet" href="../style.css" />
+	<link rel="stylesheet" href="../draw.css" />
+</head>
+<body>
+	<header>
+		<script defer src="../header.js"></script>
+	</header>
+
+	<div class="container">
+		<main>
+			<section class="api-showcase" aria-labelledby="animal-apis-heading">
+				<h2 id="animal-apis-heading" style="margin-top:0;">Random Animal Fun</h2>
+				<p class="api-intro">A collection of random animal image & fact generators. Each tile fetches from a different public API. Click refresh to get a new one.</p>
+				<div class="api-actions" aria-label="Animal API controls">
+					<button type="button" id="refresh-all" class="refresh-all-btn" aria-label="Refresh all animal tiles">Refresh All</button>
+					<button type="button" id="clear-cache" class="clear-cache-btn" aria-label="Clear cached animal results">Clear Cache</button>
+					<span class="api-status" id="api-status" aria-live="polite"></span>
+				</div>
+				<div class="api-grid" id="api-grid" aria-live="polite">
+				</div>
+			</section>
+		</main>
+    </div>
+
+	<footer>
+		<p>&copy; 2025 ChatRoom (WIP). All rights reserved.</p>
+	</footer>
+
+	<script src="../function.js"></script>
+	<script defer src="api.js"></script>
+</body>
+</html>
